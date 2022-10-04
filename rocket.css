@@ -1,0 +1,90 @@
+* {
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
+}
+
+\:root {
+    font-size: calc(16px + (24 - 16)*(100vw - 320px)/ (1280 - 320)); }
+
+.LoadingWrapper {
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    background-color: #141414;
+    z-index: 100;
+    overflow-y: hidden;
+}
+.loader {
+    position: relative;
+    width: 120px;
+    height: 120px;
+}
+
+.loader span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: rotate(calc(18deg*var(--i)))
+}
+
+.loader span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    background: #fff;
+    border-radius: 50%;
+    animation: rocketLoading 2s linear infinite;
+    animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes rocketLoading {
+    0% {
+        transform: scale(0);
+    }
+    10% {
+        transform: scale(15);
+    }
+    80%, 100% {
+        transform: scale(0);
+    }
+}
+
+.rocketLoader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: rotating 2s linear infinite;
+    animation-delay: -1s;
+}
+
+@keyframes rotating {
+    0% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(370deg);
+    }
+}
+
+.rocketLoader::before {
+    content: '\f135';
+    font-family: fontAwesome;
+    position: absolute;
+    top: 80px;
+    left: 85px;
+    color: #fff;
+    font-size: 60px;
+    transform: rotate(180deg);
+}
