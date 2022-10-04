@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JL | Fullstack Developer</title>
+  <link rel="icon" href="https://lh3.googleusercontent.com/zZbh4l3r7m1jISZFQzmf03YnAIyM4oZx_ndolXxegmuIDbreoQSgr6qWerCl1I7LJUgdZMpwTLsWz0KDxeYtjwMA3wpAz2AMdsswCGgfn6Xh5CRK5Le-nMxW3g9A0cxHiuNEktvptg=w2400" size="57 x 57"type="image/icon type">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="rocket.css">
+  <link href="style.css" rel="stylesheet">
+  <link href="customBootstrap.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <link href="waves.css" rel="stylesheet">
+  <script src="sliders.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js"></script>
+  <script>  
+  $(window).on('load', function () {  
+      $(".LoadingWrapper").fadeOut("slow");  
+  });  
+  </script>
+  <script>
+    $(document).ready(function(){
+    var width = screen.width;
+      if (screen.width <= 1350) {
+      $('#desktopProjects').remove();
+      }
+      if (screen.width > 1350) {
+        $('#mobileProjects').remove();
+      }
+    });
+  </script>
+</head>
+
+<body id="_page" class="bodyChange" onload="slide1In(); buttonPause();">
+
+<!-- ROCKET PRE LOADER -->
+<div class="LoadingWrapper">
+    <div class="loader">
+        <span style="--i:1;"></span>
+        <span style="--i:2;"></span>
+        <span style="--i:3;"></span>
+        <span style="--i:4;"></span>
+        <span style="--i:5;"></span>
+        <span style="--i:6;"></span>
+        <span style="--i:7;"></span>
+        <span style="--i:8;"></span>
+        <span style="--i:9;"></span>
+        <span style="--i:10;"></span>
+        <span style="--i:11;"></span>
+        <span style="--i:12;"></span>
+        <span style="--i:13;"></span>
+        <span style="--i:14;"></span>
+        <span style="--i:15;"></span>
+        <span style="--i:16;"></span>
+        <span style="--i:17;"></span>
+        <span style="--i:18;"></span>
+        <span style="--i:19;"></span>
+        <span style="--i:20;"></span>
+        <div class="rocketLoader"></div>
+    </div>
+</div>
+
+<!-- MOBILE NAVBAR -->
+<nav>
+  <div class="container_for_nav navbar hideDesktop">
+    <div class="nav-container">
+        <input class="checkbox" type="checkbox" name="" id="" />
+        <div class="hamburger-lines">
+          <span class="line line1"></span>
+          <span class="line line2"></span>
+          <span class="line line3"></span>
+        </div>  
+      <div class="logo">
+        <img src="https://lh3.googleusercontent.com/zZbh4l3r7m1jISZFQzmf03YnAIyM4oZx_ndolXxegmuIDbreoQSgr6qWerCl1I7LJUgdZMpwTLsWz0KDxeYtjwMA3wpAz2AMdsswCGgfn6Xh5CRK5Le-nMxW3g9A0cxHiuNEktvptg=w2400" style="height: 37px; width: 37px;" onclick="buttonPause(); slide2Out(); slide3Out(); slide1In();">
+      </div>
+      <div id="topNav" class="menu-items"> <!-- OnClick (below buttons), remove menu-items and add jsVanish. then undo using else statement.-->
+        <li><button onclick="navCheck(); buttonPause(); slide2Out(); slide3Out(); slide4Out(); slide1In();">Home</button></li>
+        <li><button onclick="navCheck(); buttonPause(); slide1Out(); slide3Out(); slide4Out(); slide2In();">Skills</button></li>
+        <li><button onclick="navCheck(); buttonPause(); slide1Out(); slide2Out(); slide4Out(); slide3In();">Projects</button></li>
+        <li><button onclick="navCheck(); buttonPause(); slide1Out(); slide2Out(); slide3Out(); slide4In();">Contact</button></li>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="FrontPageWrapper">
+
+  <!-- SLIDER BUTTONS -->
+  <div class="SliderButtonWrapper">
+    <div>
+      <button id="slide1" class="slider-1" style="margin-bottom: 20px;" onclick="buttonPause(); slide2Out(); slide3Out(); slide4Out(); slide1In();" enabled>Home</button>
+      <button id="slide2" class="slider-1" style="margin-bottom: 20px;" onclick="buttonPause(); slide1Out(); slide3Out(); slide4Out(); slide2In();" enabled>My Skills</button>
+      <button id="slide3" class="slider-1" style="margin-bottom: 20px;" onclick="buttonPause(); slide1Out(); slide2Out(); slide4Out(); slide3In();" enabled>Projects</button>
+      <button id="slide4" class="slider-1" style="margin-bottom: 0px;" onclick="buttonPause(); slide1Out(); slide2Out(); slide3Out(); slide4In();" enabled>Contact</button>
+    </div>
+  </div>
+
+  <!-- SOCIAL LINKS PAGE -->
+  <div class="SocialLinkWrapper">
+    <div class="wrapper">
+      <div class="wrapper__links"style="margin-bottom: 150px;">
+        <a class="social-link social-link--github" id="github" href="https://github.com/jmlaur" target="_blank" rel="noopener noreferrer">
+          <svg class="social-svg" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+            <!--<title>
+              github
+            </title>-->
+            <g class="social-group" fill="none" fill-rule="evenodd">
+              <circle class="social-group__outline" stroke="#000" stroke-width="20" cx="300" cy="300" r="262.5" />
+              <circle class="social-group__inner-circle" fill="#000" cx="300" cy="300" r="252.5" />
+              <path class="social-group__icon" d="M300 150c-82.8348 0-150 68.8393-150 153.817 0 67.9687 42.991 125.558 102.5893 145.9151 7.5 1.4063 10.2455-3.3482 10.2455-7.433 0-3.683-.134-13.3259-.2009-26.183-41.7187 9.308-50.558-20.625-50.558-20.625-6.8304-17.7456-16.6741-22.5-16.6741-22.5-13.5938-9.576 1.0044-9.375 1.0044-9.375 15.067 1.0714 22.9688 15.8705 22.9688 15.8705 13.3929 23.5045 35.0893 16.741 43.6607 12.7902 1.3393-9.9107 5.2232-16.741 9.509-20.558-33.2813-3.884-68.3036-17.076-68.3036-76.0045 0-16.808 5.8259-30.5357 15.4018-41.25-1.5402-3.884-6.6965-19.5536 1.4732-40.7143 0 0 12.5893-4.1518 41.25 15.7366 11.9866-3.4152 24.7768-5.0893 37.567-5.1562 12.7231.067 25.5803 1.741 37.5669 5.1562 28.6607-19.8884 41.183-15.7366 41.183-15.7366 8.1697 21.1607 3.0134 36.8304 1.4733 40.7143 9.5758 10.7812 15.4017 24.509 15.4017 41.25 0 59.0625-35.0892 72.0536-68.5044 75.8705 5.3571 4.7545 10.1785 14.1295 10.1785 28.4598 0 20.558-.2009 37.1652-.2009 42.1875 0 4.0849 2.6786 8.9063 10.3125 7.3661C407.076 429.308 450 371.7187 450 303.817 450 218.8393 382.8348 150 300 150z"
+                fill="#FFF" fill-rule="nonzero" />
+            </g>
+          </svg>
+        </a>
+        </div>
+        <div class="wrapper__links" style="margin-top: 150px;">
+        <a class="social-link social-link--linkedin" id="linkedin" href="https://www.linkedin.com/in/jmlauritsen/" target="_blank" rel="noopener noreferrer">
+          <svg class="social-svg" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+            <!--<title>
+              linkedin 
+            </title>-->
+            <g class="social-group" fill="none" fill-rule="evenodd">
+              <circle class="social-group__outline" stroke="#000" stroke-width="20" cx="300" cy="300" r="262.5" />
+              <circle class="social-group__inner-circle" fill="#2D76B0" cx="300" cy="300" r="252.5" />
+              <path class="social-group__icon" d="M278.9308 253.1923h43.5769v20.0539h.5923c6.0923-11.5077 20.9-23.6077 43.0692-23.6077 46.0308 0 54.577 30.2923 54.577 69.723v80.2154h-45.4385v-71.1615c0-17.0077-.2539-38.8385-23.6077-38.8385-23.6923 0-27.2462 18.5308-27.2462 37.5693v72.4307h-45.4384l-.0846-146.3846zm-74.1231 0h45.523V399.577h-45.523V253.1923zm22.8461-72.7692c14.5539 0 26.4 11.8461 26.4 26.4 0 14.5538-11.8461 26.4-26.4 26.4-14.6384 0-26.4-11.8462-26.4-26.4 0-14.5539 11.7616-26.4 26.4-26.4z"
+                fill="#000" fill-rule="nonzero" />
+            </g>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT ME PAGE -->
+  <div class="AboutMeWrapper col-7 col-s-9">
+    <div class="first-name-wrapper">
+      <div class="first-name-layer">J</div>
+      <div class="first-name-layer">A</div>
+      <div class="first-name-layer">M</div>
+      <div class="first-name-layer">E</div>
+      <div class="first-name-layer">S</div>
+    </div>
+    <div class="last-name-wrapper">
+      <div class="last-name-layer">L</div>
+      <div class="last-name-layer">A</div>
+      <div class="last-name-layer">U</div>
+      <div class="last-name-layer">R</div>
+      <div class="last-name-layer">I</div>
+      <div class="last-name-layer">T</div>
+      <div class="last-name-layer">S</div>
+      <div class="last-name-layer">E</div>
+      <div class="last-name-layer">N</div>
+    </div>
+    <div class="rocket-wrapper"> 
+      <img src="https://lh3.googleusercontent.com/n-xlTPedFU1GRIpc-BT1Mws02H0SMbm-4WNhEi5wQMtJr2qjJHmQFjCH6q-sNWaaEu9F4FQfED7CWRM5j_feREuJJRKrOQkzBLfGKQMRF5fNfDxoJXYOr5Zi9uJvgwTfbZABpCdWxA=w2400" alt="3D model of a rocket by a moon" class="rocket">
+    </div>
+    <div class="paragraph-wrapper">
+      <div class="paragraph-layer">Fullstack developer interested in the the entire engineering spectrum 
+      and working on ambitious projects with positive people.</div>
+    </div>
+  </div> 
+
+  <!-- SKILLS PAGE -->
+  <div class="SkillsWrapper">
+    <div class="col-6 col-skills">
+      <div class="skills-header">Skills & Experience</div>
+      <div class="skills-paragraph">Since beginning my journey as a developer in 2021, I have gone through many different coding
+        challenges and projects that you can view on my projects page. I have experience with Python and Javascript for back-end 
+        development and HTML5, CSS3, Javascript, React, and React Native for front-end development. 
+    </div>
+  </div>
+    <!-- SKILL BALL -->
+    <div class="BallWrapper">
+      <div class="skills-chart">
+        <div id="root"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WAVES -->
+  <div class="wavesContainer">
+    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(20,20,20,0.7" />
+            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(20,20,20,0.5)" />
+            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(20,20,20,0.3)" />
+            <use xlink:href="#gentle-wave" x="48" y="7" fill="rgb(20, 20, 20)" />
+        </g>
+    </svg>
+  </div>
+
+  <!-- DESKTOP PROJECTS PAGE -->
+  <div id="desktopProjects" class="projects-page" >
+    <div id="desktopProjects" class="projects-wrapper col-6 col-s-12">
+      <img  id="glow" src="https://lh3.googleusercontent.com/YZTsa4e-73QNCxBv-64T_buq7IKECuHeR0dKdzYTpaUua8p1soqSq3B-vSUVrMDUvMbuXvbIkmfwllS-MHOzBS_RapVyFN3oDPkMNqteHaiOE3NI18Y5JElAkdhQhGhlxaEpLlVsXQ=w2400" class="col-h-12 col-6 col-s-6 project-image" onclick="window.open('https://schooloffish.info/')">
+      <div style="width: 65%;">
+        <h1 class="project-title">School of Fish</h1>
+        <p class="project-langs" style="color: rgb(0, 187, 255); font-style: normal; font-weight: 700;">Website</p>
+        <p class="project-langs">Built with HTML5, CSS3, JavaScript, and PHP.</p>
+        <p class="project-description">School of Fish is a website dedicated to displaying fact-based 
+          information regarding proper care for aquatic life. The website also includes research articles for the user to read,
+        such as a sponsored research project I completed for Great Wave Engineering.</p>
+        <div style="flex-direction: row;">
+          <div class="buttons">
+            <a class="aButton" href="https://schooloffish.info/" target="_blank"><button class="button-offset offset">Visit</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="desktopProjects" class="projects-wrapper col-6 col-s-12">
+      <div style="margin-left: auto; width: 65%;">
+        <h1 class="project-title">Biogravel Anaerobic Research</h1>
+        <p class="project-langs" style="color: rgb(0, 187, 255); font-style: normal; font-weight: 700;">Article</p>
+        <p class="project-langs">Microbiology</p>
+        <p class="project-description">Research sponsored by Great Wave Engineering to analyze the anaerobic capabilities of their aquarium filter media product "Biogravel".</p>
+        <div style="flex-direction: row;">
+          <div class="buttons">
+            <a class="aButton" href="https://schooloffish.info/biogravel1.html" target="_blank"><button class="button-offset offset">Visit</button></a>
+          </div>
+        </div>
+      </div>
+      <img  id="glow" src="https://lh3.googleusercontent.com/l0t1bj122SBQ0t9g8K9TpWA7E5byqEHMS-2TS_8zub6e27bw1JYpBsYWfE_5EJpcxAbjE99LPYPCd54Re9D2QrgvZxwbm0yTGSabm1WWFMEx-PPVMI-_h-lFS7lnsGzTyB7wBy5Y9A=w2400" class="col-h-12 col-6 col-s-6 project-image" onclick="window.open('https://schooloffish.info/biogravel1.html')">
+    </div>
+    <div id="desktopProjects" class="projects-wrapper col-6 col-s-12">
+      <img  id="glow" src="https://lh3.googleusercontent.com/Z86__7sle_nFicuYZxHjQUz_2ZVW8VMrG2gj81DesCyZ5vXyiexSuqtvKFsAn_eiLBVCR_Vp2Z8zKDIPQgSU6LFOov8LfhYCAmHBA-YAuY5_OzUxqFLb5bQyDsriy29Mg46ZvJrGYg=w2400" class="col-h-12 col-6 col-s-6 project-image" onclick="window.open('https://www.birmingham.k12.mi.us/Page/1238')">
+        <div style="margin-left: auto; width: 65%;">
+          <h1 class="project-title">Birmingham Public Schools </h1>
+          <p class="project-langs" style="color: rgb(0, 187, 255); font-style: normal; font-weight: 700;">Website</p>
+          <p class="project-langs">Built with HTML5 and CSS3.</p>
+          <p class="project-description">During my senior year of high school, my programming teacher offered me the ability to update the 
+            Career Focused Education webpage for our school districts website. After a few weeks of 
+            conversing with the District Department Head K-12 CTE and CFE, the webpage was updated and available for viewing.</p>
+          <div style="flex-direction: row;">
+            <div class="buttons">
+              <a class="aButton" href="https://github.com/jmlaur/BPS-CTE-CFE" target="_blank"><button class="button-offset offset">View Source</button></a>
+            </div>
+            <div class="buttons">
+              <a class="aButton" href="https://www.birmingham.k12.mi.us/Page/1238" target="_blank"><button class="button-offset offset">Visit</button></a>
+            </div>
+          </div>
+        </div>
+        
+    </div>
+    <div id="desktopProjects" class="projects-wrapper col-6 col-s-12">
+      <div style="margin-right: auto; width: 65%;">
+        <h1 class="project-title">Aquarium Tracker</h1>
+        <p class="project-langs" style="color: rgb(0, 187, 255); font-style: normal; font-weight: 700;">Mobile app</p>
+        <p class="project-langs">Built with React Native and Expo Go.</p>
+        <p class="project-description">Aquarium Tracker is a mobile app used to keep track of your aquarium.
+          Within the app, you can create a profile for each of your aquariums and setup tasks that can be set for different times
+          and dates. The app also lets you record, store, and review changes about your aquarium, such as water quality 
+          and livestock adjustments.
+        </p>
+        <div style="flex-direction: row;">
+          <div class="buttons">
+            <a class="aButton" href="https://github.com/jmlaur/Aquarium-Tracker" target="_blank"><button class="button-offset offset">View Source</button></a>
+          </div>
+          <div class="buttons">
+          </div>
+        </div>
+      </div>
+      <img id="glow" src="https://lh3.googleusercontent.com/HgjSl_41fmcT0MoB7Py3is11hnYOJ79YfmrFoRxlrMOlfS-kivsqrcAZUvpyqf1AR5Q5SHEgpFxHhHNDQnbQURnFMOVXFPirIlQSDFEwy4mY50D7v4xtNbyeID9OH9bD7y9ekVj5Sg=w2400" class="col-h-12 col-6 col-s-6 project-image">
+    </div>
+  </div>
+  <!-- END DESKTOP PROJECTS PAGE -->
+
+  <!-- MOBILE PROJECTS PAGE -->
+  <div id="mobileProjects" class="projects-page" >
+    <div id="mobileProjects" class="projects-wrapper col-6 col-s-12">
+      <div style="width: 65%;">
+        <h1 class="project-title">School of Fish</h1>
+        <p class="project-langs" style="color: rgb(0, 187, 255); font-style: normal; font-weight: 700;">Website</p>
+        <p class="project-langs">Built with HTML5, CSS3, JavaScript, and PHP.</p>
+        <p class="project-description">School of Fish is a website dedicated to displaying fact-based 
+          information regarding proper care for aquatic life. The website also includes research articles for the user to read,
+        such as a sponsored research project I completed for Great Wave Engineering.</p>
+        <div style="flex-direction: row;">
+          <div class="buttons">
+            <a class="aButton" href="https://schooloffish.info/" target="_blank"><button class="button-offset offset">Visit</button></a>
+          </div>
+        </div>
+      </div>
+      <img  id="glow" src="https://lh3.googleusercontent.com/YZTsa4e-73QNCxBv-64T_buq7IKECuHeR0dKdzYTpaUua8p1soqSq3B-vSUVrMDUvMbuXvbIkmfwllS-MHOzBS_RapVyFN3oDPkMNqteHaiOE3NI18Y5JElAkdhQhGhlxaEpLlVsXQ=w2400" class="col-h-12 col-6 col-s-6 project-image" onclick="window.open('https://schooloffish.info/')">
+    </div>
+    <div id="mobileProjects" class="projects-wrapper col-6 col-s-12">
+      <div style="margin-left: auto; width: 65%;">
+        <h1 class="project-title">Biogravel Anaerobic Research</h1>
+        <p class="project-langs" style="color: rgb(0, 187, 255); font-style: normal; font-weight: 700;">Article</p>
+        <p class="project-langs">Microbiology</p>
+        <p class="project-description">Research sponsored by Great Wave Engineering to analyze the anaerobic capabilities of their aquarium filter media product "Biogravel".</p>
+        <div style="flex-direction: row;">
+          
+          <div class="buttons">
+            <a class="aButton" href="https://schooloffish.info/biogravel1.html" target="_blank"><button class="button-offset offset">Visit</button></a>
+          </div>
+        </div>
+      </div>
+      <img  id="glow" src="https://lh3.googleusercontent.com/l0t1bj122SBQ0t9g8K9TpWA7E5byqEHMS-2TS_8zub6e27bw1JYpBsYWfE_5EJpcxAbjE99LPYPCd54Re9D2QrgvZxwbm0yTGSabm1WWFMEx-PPVMI-_h-lFS7lnsGzTyB7wBy5Y9A=w2400" class="col-h-12 col-6 col-s-6 project-image" onclick="window.open('https://schooloffish.info/biogravel1.html')">
+    </div>
+    <div id="mobileProjects" class="projects-wrapper col-6 col-s-12">
+        <div style="margin-left: auto; width: 65%;">
+          <h1 class="project-title">Birmingham Public Schools </h1>
+          <p class="project-langs" style="color: rgb(0, 187, 255); font-style: normal; font-weight: 700;">Website</p>
+          <p class="project-langs">Built with HTML5 and CSS3.</p>
+          <p class="project-description">During my senior year of high school, my programming teacher offered me the ability to update the 
+            Career Focused Education webpage for our school districts website. After a few weeks of 
+            conversing with the District Department Head K-12 CTE and CFE, the webpage was updated and available for viewing.</p>
+          <div style="flex-direction: row;">
+            <div class="buttons">
+              <a class="aButton" href="https://github.com/jmlaur/BPS-CTE-CFE" target="_blank"><button class="button-offset offset">View Source</button></a>
+            </div>
+            <div class="buttons">
+              <a class="aButton" href="https://www.birmingham.k12.mi.us/Page/1238" target="_blank"><button class="button-offset offset">Visit</button></a>
+            </div>
+          </div>
+        </div>
+        <img  id="glow" src="https://lh3.googleusercontent.com/Z86__7sle_nFicuYZxHjQUz_2ZVW8VMrG2gj81DesCyZ5vXyiexSuqtvKFsAn_eiLBVCR_Vp2Z8zKDIPQgSU6LFOov8LfhYCAmHBA-YAuY5_OzUxqFLb5bQyDsriy29Mg46ZvJrGYg=w2400" class="col-h-12 col-6 col-s-6 project-image" onclick="window.open('https://www.birmingham.k12.mi.us/Page/1238')">
+    </div>
+    <div id="mobileProjects" class="projects-wrapper col-6 col-s-12">
+      <div style="margin-right: auto; width: 65%;">
+        <h1 class="project-title">Aquarium Tracker</h1>
+        <p class="project-langs" style="color: rgb(0, 187, 255); font-style: normal; font-weight: 700;">Mobile app</p>
+        <p class="project-langs">Built with React Native and Expo Go.</p>
+        <p class="project-description">Aquarium Tracker is a mobile app used to keep track of your aquarium.
+          Within the app, you can create a profile for each of your aquariums and setup tasks that can be set for different times
+          and dates. The app also lets you record, store, and review changes about your aquarium, such as water quality 
+          and livestock adjustments.
+        </p>
+        <div style="flex-direction: row;">
+          <div class="buttons">
+            <a class="aButton" href="https://github.com/jmlaur/Aquarium-Tracker" target="_blank"><button class="button-offset offset">View Source</button></a>
+          </div>
+          <div class="buttons">
+          </div>
+        </div>
+      </div>
+      <img  id="glow" src="https://lh3.googleusercontent.com/HgjSl_41fmcT0MoB7Py3is11hnYOJ79YfmrFoRxlrMOlfS-kivsqrcAZUvpyqf1AR5Q5SHEgpFxHhHNDQnbQURnFMOVXFPirIlQSDFEwy4mY50D7v4xtNbyeID9OH9bD7y9ekVj5Sg=w2400" class="col-h-12 col-6 col-s-6 project-image">
+    </div>
+  </div>
+  <!-- END MOBILE PROJECTS PAGE -->
+
+  <!-- CONTACT PAGE -->
+  <div class="contactPage">
+    <p class="contactHeader">Contact</p>
+    <div class="formContainer">
+      <form action="/send_email.php" method="post" id="contact-form">
+        <div class="nameInput">
+        <input id="boxes" type="text" id="fname" name="name" value="" class="formFormL" placeholder="Name" maxlength="50"></input>
+        </div>
+        <div class="emailInput">
+        <input id="boxes" type="text" id="lname" name="email" value="" class="formFormR" placeholder="Email" maxlength="50"></input>
+        </div>
+
+        <div class="messageInput">
+        <textarea id="boxes" id="fname" name="message" value="" class="formFormM" placeholder="Message" maxlength="1000"></textarea>
+        </div>
+        <div style="padding: 5px;">
+        <button type="submit" value="Send" class="up" name="submit">Send</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+</div>
+
+</body>
+</html>
