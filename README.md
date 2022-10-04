@@ -5,3 +5,6 @@ This web portfolio is where I showcase my development skills, projects, a bit ab
 In this repository I include bits of the code that people may find interesting or want to use for their own projects.
 
 Please refer to the live version here: https://jmlauritsen.com/
+
+TO-DO:
+- Convert all classes & IDs to camelcase.
