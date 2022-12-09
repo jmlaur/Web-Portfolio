@@ -5,39 +5,39 @@
     display: none;
   }
 
-  .container_for_nav {
+  .containerForNav {
     position: absolute;
     width: 100%;
     margin: auto;
   }
 
-  .navbar {
+  .navBar {
     width: 100%;
   }
 
-  .nav-container {
+  .navContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
   }
   
-  .navbar .menu-items {
+  .navBar .menuItems {
     display: flex;
   }
   
-  .navbar .nav-container li {
+  .navBar .navContainer li {
     list-style: none;
   }
   
-  .navbar .nav-container a {
+  .navBar .navContainer a {
     text-decoration: none;
     font-weight: 500;
     font-size: 1.2rem;
     padding: 0.7rem;
   }
   
-  .nav-container .checkbox {
+  .navContainer .checkBox {
     position: absolute;
     display: block;
     height: 32px;
@@ -49,7 +49,7 @@
     cursor: pointer;
   }
   
-  .nav-container .hamburger-lines {
+  .navContainer .hamburgerLines {
     display: block;
     height: 26px;
     width: 32px;
@@ -62,7 +62,7 @@
     justify-content: space-between;
   }
   
-  .nav-container .hamburger-lines .line {
+  .navContainer .hamburgerLines .line {
     display: block;
     height: 4px;
     width: 100%;
@@ -70,21 +70,21 @@
     background: rgb(161, 161, 161);
   }
   
-  .nav-container .hamburger-lines .line1 {
+  .navContainer .hamburgerLines .line1 {
     transform-origin: 0% 0%;
     transition: transform 0.4s ease-in-out;
   }
   
-  .nav-container .hamburger-lines .line2 {
+  .navContainer .hamburgerLines .line2 {
     transition: transform 0.2s ease-in-out;
   }
   
-  .nav-container .hamburger-lines .line3 {
+  .navContainer .hamburgerLines .line3 {
     transform-origin: 0% 100%;
     transition: transform 0.4s ease-in-out;
   }
   
-  .navbar .menu-items {
+  .navBar .menuItems {
     padding-top: 120px;
     background-color: rgb(38, 38, 38);
     opacity: 0.9;
@@ -98,7 +98,7 @@
     z-index: 90;
   }
   
-  .navbar .menu-items button{
+  .navBar .menuItems button{
     margin-bottom: 1.2rem;
     font-weight: 300;
     font-size: 20px;
@@ -118,23 +118,23 @@
     z-index: 90;
   }
   
-  .nav-container input[type="checkbox"]:checked ~ .menu-items {
+  .navContainer input[type="checkBox"]:checked ~ .menuItems {
     transform: translateX(0);
   }
   
-  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+  .navContainer input[type="checkBox"]:checked ~ .hamburgerLines .line1 {
     transform: rotate(45deg);
   }
   
-  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+  .navContainer input[type="checkBox"]:checked ~ .hamburgerLines .line2 {
     transform: scaleY(0);
   }
   
-  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+  .navContainer input[type="checkBox"]:checked ~ .hamburgerLines .line3 {
     transform: rotate(-45deg);
   }
   
-  .nav-container input[type="checkbox"]:checked ~ .logo{
+  .navContainer input[type="checkBox"]:checked ~ .logo{
     display: block;
   }
 
@@ -380,8 +380,8 @@
 /* Mobile Project Page */
 @media only screen and (min-width: 200px) and (max-width: 1350px) {
   #glow {margin: 20px; width: 35%}
-  .projects-wrapper {margin-left: 10px; margin-right: 10px; margin-top: 50px;}
-  .button-offset {padding: 2vw 3vw;}
+  .projectsWrapper {margin-left: 10px; margin-right: 10px; margin-top: 50px;}
+  .buttonOffset {padding: 2vw 3vw;}
   .overlayBox {height: 80vh; margin-top: 10vh; margin-bottom: 10vh;}
   .overlayImage {width: 100%; margin: 0; height: 50vh;}
   .exit {top: 10vh;}
@@ -398,18 +398,18 @@
 @media only screen and (min-width: 500px) and (max-width: 1350px) {
   .buttons {font-size: 2vw;}
   .aButton {font-size: 2vw;}
-  .project-title {font-size: 4vw;}
-  .project-langs {font-size: 2vw;}
-  .project-description {font-size: 2vw;}
+  .projectTitle {font-size: 4vw;}
+  .projectLangs {font-size: 2vw;}
+  .projectDescription {font-size: 2vw;}
 }
 
 /* Font Size for Mobile */
 @media only screen and (min-width: 200px) and (max-width: 499px) {
   .buttons {font-size: 3vw;}
   .aButton {font-size: 3vw;}
-  .project-title {font-size: 6vw;}
-  .project-langs {font-size: 3vw;}
-  .project-description {font-size: 3vw;}
+  .projectTitle {font-size: 6vw;}
+  .projectLangs {font-size: 3vw;}
+  .projectDescription {font-size: 3vw;}
   .contactPage {font-size: 4vw; margin-top: 30%;}
 }
 
@@ -417,23 +417,23 @@
 @media only screen and (min-width: 200px) and (max-width: 1350px) {
   body {overflow-y:unset;}
   .hidePhone {display: none;}
-  .BallWrapper {float: left; width: 120%; right: 10%;}
-  .SkillsWrapper {width: 80%; margin-left: 10%; margin-top: 50px;}
+  .ballWrapper {float: left; width: 120%; right: 10%;}
+  .skillsWrapper {width: 80%; margin-left: 10%; margin-top: 50px;}
   .col-s-9 {width: 75%;}
   .col-skills {width: 100%;}
-  .first-name-layer {font-size: 40px;}
-  .paragraph-layer {font-size: 15px; word-wrap: break-word;}
-  .last-name-layer {font-size: 40px;}
+  .firstNameLayer {font-size: 40px;}
+  .paragraphLayer {font-size: 15px; word-wrap: break-word;}
+  .lastNameLayer {font-size: 40px;}
   .wrapper {display: none;}
-  .SliderButtonWrapper {display: none;}
+  .sliderButtonWrapper {display: none;}
 }
 
 @media only screen and (max-width: 1350px) {
-  .rocket-wrapper {display:none;}
-  .button-offset {padding: 1.8vw 2.8vw;}
-  .first-name-wrapper {top: 0px;}
-  .last-name-wrapper {top: 0px;}
-  .paragraph-wrapper {top: 0px;}
+  .rocketWrapper {display:none;}
+  .buttonOffset {padding: 1.8vw 2.8vw;}
+  .firstNameWrapper {top: 0px;}
+  .lastNameWrapper {top: 0px;}
+  .paragraphWrapper {top: 0px;}
 }
 
 /* For desktop: */

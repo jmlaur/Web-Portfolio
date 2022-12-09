@@ -23,7 +23,7 @@ body {
     visibility: visible;
   }
 
-.FrontPageWrapper {
+.frontPageWrapper {
     width: 100%;
     display: flex;
     overflow-x: hidden;
@@ -266,7 +266,7 @@ body {
     }
 }
 
-.projects-page {
+.projectsPage {
     width: 100%;
     margin-top:4em;
     cursor: default;
@@ -280,7 +280,7 @@ body {
     justify-content: space-between;
 }
 
-.projects-wrapper {
+.projectsWrapper {
     position: relative;
     display: flex;
     -webkit-box-orient: vertical;
@@ -325,7 +325,7 @@ body {
     transform: scale(1.2);
 }
 
-.project-langs {
+.projectLangs {
     color: rgb(161, 161, 161);
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
@@ -334,7 +334,7 @@ body {
     font-size: 15px
 }
 
-.project-description {
+.projectDescription {
     margin-top: 1em;
     font-size: 15px;
     color: rgb(161, 161, 161);
@@ -344,7 +344,7 @@ body {
     width: auto;
 }
 
-.project-title {
+.projectTitle {
     text-align: left;
     font-family: 'Poppins', sans-serif;
     color: white; /* #3df1f1 */
@@ -352,7 +352,7 @@ body {
     font-weight: 700;
 }
 
-.SkillsWrapper {
+.skillsWrapper {
     margin: 25vh 10em 25vh 10em;
     cursor: default;
 
@@ -370,7 +370,7 @@ body {
     animation-name: none;
 }
 
-.skills-header {
+.skillsHeader {
     width: 60%;
     font-size: 35px;
     font-family: 'Poppins', sans-serif;
@@ -381,7 +381,7 @@ body {
     visibility: visible;
 }
 
-.skills-paragraph {
+.skillsParagraph {
     width: 100%;
     font-size: 15px;
     font-family: 'Poppins', sans-serif;
@@ -393,7 +393,7 @@ body {
     visibility: visible;
 }
 
-.BallWrapper {
+.ballWrapper {
     position: relative;
     float: right;
     top:3em;
@@ -406,7 +406,7 @@ body {
     margin-right: 1em;
 }
 
-.skills-chart {
+.skillsChart {
     margin-right: 0em;
     opacity: 1;
     transform-origin: 50% 50% 0px;
@@ -438,7 +438,7 @@ body {
     transition: width 1.3s ease-out;
 }
 
-.SocialLinkWrapper {
+.socialLinkWrapper {
     opacity: 1;
     position: absolute;
     width: 100%;
@@ -447,7 +447,7 @@ body {
     min-height: 100%;
 }
 
-.AboutMeWrapper {
+.aboutMeWrapper {
     position: relative;
     margin: auto;
     /* ADD IF BROKEN height: 100%; */
@@ -468,7 +468,7 @@ body {
 
 /* Slide 1 Rocket */
 
-.rocket-wrapper {
+.rocketWrapper {
     width: 580px;
     height: 480px;
     float: right;
@@ -478,7 +478,7 @@ body {
     animation-duration: 2s;
     animation-iteration-count: 1;
     animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
-    animation-fill-mode:none;
+    animation-fill-mode: forwards;
     animation-name: none;
 }
 
@@ -522,7 +522,7 @@ body {
 /* Slide 1 my name */
 
 
-.first-name-layer {
+.firstNameLayer {
     font-family: 'Poppins', sans-serif;
     display: inline-block;
     height: auto;
@@ -547,11 +547,11 @@ body {
     animation-duration: 1s;
 }
 
-.first-name-layer:hover {
+.firstNameLayer:hover {
     transform: scale(2);
 }
 
-.first-name-wrapper {
+.firstNameWrapper {
     position: relative;
     left: 0px;
     top: 200px;
@@ -572,7 +572,7 @@ body {
 }
 
 
-.last-name-layer {
+.lastNameLayer {
     font-family: 'Poppins', sans-serif;
     display: inline-block;
     height: auto;
@@ -595,11 +595,11 @@ body {
     animation-duration: 1s;
 }
 
-.last-name-layer:hover {
+.lastNameLayer:hover {
     transform: scale(2);
 }
 
-.last-name-wrapper {
+.lastNameWrapper {
     z-index: 4;
     position: relative;
     left: 0px;
@@ -619,7 +619,7 @@ body {
 
 /* Slide 1 Paragraph */
 
-.paragraph-wrapper {
+.paragraphWrapper {
     position: relative;
     top: 230px;
     display: block;
@@ -632,7 +632,7 @@ body {
     visibility: visible;
 }
 
-.paragraph-layer {
+.paragraphLayer {
     cursor: default;
     z-index: 6;
     font-family: 'Poppins', sans-serif;
@@ -659,7 +659,7 @@ body {
 
 /* Slider buttons */
 
-.SliderButtonWrapper {
+.sliderButtonWrapper {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -718,7 +718,7 @@ body {
     top: 0;
     right: 30px;
 }
-.wrapper__links {
+.wrapperLinks {
     position: fixed; 
     display: flex;
     justify-content: space-between;
@@ -726,47 +726,44 @@ body {
     width: auto;
     z-index: 30;
 }
-.social-link--linkedin {
+.socialLink--linkedin {
     color: #2d76b0;
 }
-.social-link--github {
+.socialLink--github {
     color: #000;
 }
-.social-link--instagram {
+.socialLink--instagram {
     color: #9a2970;
 }
-.social-link--dribbble {
+.socialLink--dribbble {
     color: #b53561;
 }
-.social-link .social-svg {
+.socialLink .socialSVG {
     width: 4.8rem;
     height: 4.8rem;
 }
-.social-link .social-svg .social-group__icon {
+.socialLink .socialSVG .socialGroup__icon {
     fill: #ffffff;
     transition: all 0.2s;
 }
-.social-link .social-svg .social-group__inner-circle {
+.socialLink .socialSVG .socialGroup__inner-circle {
     fill: transparent;
     transition: all 0.2s;
 }
-.social-link .social-svg .social-group__outline {
+.socialLink .socialSVG .socialGroup__outline {
     stroke: #ffffff;
     transform-origin: 50% 50%;
     transition: all 0.2s;
 }
-.social-link .social-svg:hover .social-group__icon, .social-link .social-svg:active .social-group__icon, .social-link .social-svg:focus .social-group__icon {
+.socialLink .socialSVG:hover .socialGroup__icon, .socialLink .socialSVG:active .socialGroup__icon, .socialLink .socialSVG:focus .socialGroup__icon {
     fill: #fffbfa;
     transition: all 0.45s;
 }
-.social-link .social-svg:hover .social-group__inner-circle, .social-link .social-svg:active .social-group__inner-circle, .social-link .social-svg:focus .social-group__inner-circle {
+.socialLink .socialSVG:hover .socialGroup__inner-circle, .socialLink .socialSVG:active .socialGroup__inner-circle, .socialLink .socialSVG:focus .socialGroup__inner-circle {
     fill: currentColor;
     transition: all 0.45s;
 }
-.social-link .social-svg:hover .social-group__inner-circle--instagram, .social-link .social-svg:active .social-group__inner-circle--instagram, .social-link .social-svg:focus .social-group__inner-circle--instagram {
-    fill: url(#simpleInsta) !important;
-}
-.social-link .social-svg:hover .social-group__outline, .social-link .social-svg:active .social-group__outline, .social-link .social-svg:focus .social-group__outline {
+.socialLink .socialSVG:hover .socialGroup__outline, .socialLink .socialSVG:active .socialGroup__outline, .socialLink .socialSVG:focus .socialGroup__outline {
     stroke: currentColor;
     transform: scale(1.1);
     transition: all 0.45s;
@@ -785,7 +782,7 @@ body {
     --color: white; /* #3df1f1 */
     --hover: #4974a5; /* #4974a5 */
 }
-.button-offset:hover, .button-offset:focus {
+.buttonOffset:hover, .buttonOffset:focus {
     cursor:pointer;
     border-color: var(--hover);
     color: whitesmoke;
@@ -803,7 +800,7 @@ body {
     align-items: center;
     */
 }
-.button-offset {
+.buttonOffset {
     font: inherit;
     background: none;
     border: 2px solid;
