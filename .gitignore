@@ -1,0 +1,4 @@
+node_modules/
+.vscode/
+build/
+public/send_email.php
