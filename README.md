@@ -7,4 +7,4 @@ In this repository I include bits of the code that people may find interesting o
 Please refer to the live version here: https://jmlauritsen.com/
 
 TO-DO:
-- Desktop menu & social links fixed to page.
+- Add more appeal to front mobile page.
