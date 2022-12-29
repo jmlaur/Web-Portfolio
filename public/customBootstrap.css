@@ -429,7 +429,7 @@
 }
 
 @media only screen and (max-width: 1350px) {
-  .rocketWrapper {display:none;}
+  .rocketWrapper {display: none;} /*position: absolute; height: 50vw; width: auto; bottom: 0;*/
   .buttonOffset {padding: 1.8vw 2.8vw;}
   .firstNameWrapper {top: 0px;}
   .lastNameWrapper {top: 0px;}
