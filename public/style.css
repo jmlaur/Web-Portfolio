@@ -10,6 +10,16 @@ body {
     overflow-y:auto;
 }
 
+::selection {
+    color: none;
+    background: none;
+}
+/* For Mozilla Firefox */
+::-moz-selection {
+    color: none;
+    background: none;
+}
+
 ::-webkit-scrollbar {
     width: 5px; 
   }
