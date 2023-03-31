@@ -78,6 +78,10 @@ function slide1In() {
     for (let i = 0; i < slide1W7.length; i++) {   
         slide1W7[i].style.animationName = 'slide1-wrapperP2';
     }
+    const slide1PARA = document.querySelectorAll('.paragraphLayer');
+    for (let i = 0; i < slide1PARA.length; i++) {   
+        slide1PARA[i].style.display = 'block';
+    }
 
     //First Name
     const slide1W = document.querySelectorAll('.firstNameWrapper');
@@ -142,8 +146,12 @@ function slide1Out() {
         }
         const slide1W31 = document.querySelectorAll('.FrontPage');
         for (let i = 0; i < slide1W31.length; i++) {   
-            slide1W31[i].style.overflowY = 'visible';
-            }
+        slide1W31[i].style.overflowY = 'visible';
+        }
+        const slide1PARA = document.querySelectorAll('.paragraphLayer');
+        for (let i = 0; i < slide1PARA.length; i++) {   
+        slide1PARA[i].style.display = 'none';
+        }
     }
 }
 

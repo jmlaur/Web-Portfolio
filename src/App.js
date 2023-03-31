@@ -35,7 +35,7 @@ function Cloud({ count = 4, radius = 20 }) {
     const phiSpan = Math.PI / (count + 1)
     const thetaSpan = (Math.PI * 2) / count
     function word(j) {
-      let test = ['HTML5', 'CSS3', 'JavaScript', 'Node.js', 'Bootstrap', 'jQuery', 'React Native', 'ES6', 'Python', 'React', 'three.js'];
+      let test = ['HTML5', 'CSS3', 'JavaScript', 'Node.js', 'Bootstrap', 'jQuery', 'C#', 'ES6', 'Python', 'React', 'three.js'];
       return test[j]
       
     }
