@@ -35,7 +35,7 @@ function Cloud({ count = 4, radius = 20 }) {
     const phiSpan = Math.PI / (count + 1)
     const thetaSpan = (Math.PI * 2) / count
     function word(j) {
-      let test = ['HTML5', 'CSS3', 'JavaScript', 'Node.js', 'Bootstrap', 'jQuery', 'C#', 'ES6', 'Python', 'React', 'three.js'];
+      let test = ['HTML5', 'CSS3', 'JavaScript', 'Node.js', 'Bootstrap', 'jQuery', 'C#', 'ES6', 'Python', 'MySQL'];
       return test[j]
       
     }
@@ -51,7 +51,7 @@ export default function App() {
   return (
     <Canvas dpr={[1, 2]} camera={{ position: [0, 0, 35], fov: 90 }}>
       <fog attach="fog" args={['#202025', 0, 80]} />
-      <Cloud count={11} radius={20} /> 
+      <Cloud count={10} radius={20} /> 
       <OrbitControls autoRotate enablePan={false} enableZoom={false} />
     </Canvas>
   )
