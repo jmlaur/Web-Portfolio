@@ -7,4 +7,4 @@ In this repository I include bits of the code that people may find interesting o
 Please refer to the live version here: https://jmlauritsen.com/
 
 TO-DO:
-- Add more appeal to front mobile page.
+- Improve mobile home page.
